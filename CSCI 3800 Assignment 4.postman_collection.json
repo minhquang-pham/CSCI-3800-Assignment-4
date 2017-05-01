@@ -1,0 +1,113 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CSCI 3800 Assignment 4",
+		"_postman_id": "73f08c9c-b6b3-a055-b3c7-3615da272719",
+		"description": "For web api hw5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Call to Base",
+			"request": {
+				"url": "http://clockworklegacy-test.apigee.net/project5",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Call Database",
+			"request": {
+				"url": "http://clockworklegacy-test.apigee.net/project5/movies",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post Movie",
+			"request": {
+				"url": "http://clockworklegacy-test.apigee.net/project5/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"New Movie\",\n\t\"releasedate\" : \"TBA\",\n    \"actor\" : [\n        \"Actor 1\",\n        \"Actor 2\",\n        \"Actor 3\"\n      ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Movie Added",
+			"request": {
+				"url": "http://clockworklegacy-test.apigee.net/project5/movies/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"ElOHEL\",\n\t\"releasedate\" : \"12-25-2000\",\n    \"actor\" : [\n        \"Jesus\",\n        \"Adam\",\n        \"Dank Lord\"\n      ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie",
+			"request": {
+				"url": "http://clockworklegacy-test.apigee.net/project5/movies/New Movie",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Invalid Movie",
+			"request": {
+				"url": "http://mohossain-test.apigee.net/hw5/movies/kk",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Nice\",\n\t\"releasedate\" : \"12-25-2000\",\n    \"actor\" : [\n        \"Jesus\",\n        \"Adam\",\n        \"Dank Lord\"\n      ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
