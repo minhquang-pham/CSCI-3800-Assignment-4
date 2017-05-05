@@ -72,7 +72,7 @@
 		{
 			"name": "Delete Movie",
 			"request": {
-				"url": "http://clockworklegacy-test.apigee.net/project5/movies/New Movie",
+				"url": "http://clockworklegacy-test.apigee.net/project5/movies/Tremors",
 				"method": "DELETE",
 				"header": [
 					{
@@ -92,7 +92,7 @@
 		{
 			"name": "Get Invalid Movie",
 			"request": {
-				"url": "http://mohossain-test.apigee.net/hw5/movies/kk",
+				"url": "http://clockworklegacy-test.apigee.net/project5/movies/Unknown Movie",
 				"method": "GET",
 				"header": [
 					{
